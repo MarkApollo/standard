@@ -222,12 +222,6 @@ namespace System
         IPv6 = 4,
         Unknown = 0,
     }
-    public enum UriIdnScope
-    {
-        All = 2,
-        AllExceptIntranet = 1,
-        None = 0,
-    }
     public enum UriKind
     {
         Absolute = 1,
@@ -266,6 +260,13 @@ namespace System
 }
 namespace System.CodeDom.Compiler
 {
+    [System.AttributeUsageAttribute((System.AttributeTargets)(32767), Inherited=false, AllowMultiple=false)]
+    public sealed partial class GeneratedCodeAttribute : System.Attribute
+    {
+        public GeneratedCodeAttribute(string tool, string version) { }
+        public string Tool { get { throw null; } }
+        public string Version { get { throw null; } }
+    }
     public partial class IndentedTextWriter : System.IO.TextWriter
     {
         public const string DefaultTabString = "    ";

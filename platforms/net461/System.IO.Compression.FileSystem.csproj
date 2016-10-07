@@ -10,8 +10,8 @@
   <ItemGroup>
     <ProjectReference Include="mscorlib.csproj" />
     <ProjectReference Include="System.csproj" />
-    <ProjectReference Include="System.Xml.csproj" />
-    <Compile Include="System.Runtime.Serialization.cs" />
+    <ProjectReference Include="System.IO.Compression.csproj" />
+    <Compile Include="System.IO.Compression.FileSystem.cs" />
   </ItemGroup>
   <Import Project="$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), dir.targets))\dir.targets" />
 </Project>
